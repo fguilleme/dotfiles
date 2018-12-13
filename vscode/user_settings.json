@@ -1,0 +1,150 @@
+{
+    "files.autoSave": "afterDelay",
+    "files.associations": {
+        "*.json": "jsonc",
+        "*.vue": "vue"
+    },
+    "files.exclude": {
+        "*.orig": true
+    },
+
+    "window.zoomLevel": 1,
+
+    "editor.renderWhitespace": "boundary",
+    "editor.wordWrap": "on",
+
+    "breadcrumbs.enabled": true,
+    "explorer.confirmDelete": false,
+
+    "workbench.activityBar.visible": true,
+    "workbench.colorCustomizations": {
+        "statusBar.background": "#555588",
+        "statusBar.noFolderBackground": "#555588",
+        "statusBar.debuggingBackground": "#555588"
+    },
+    "workbench.colorTheme": "Visual Studio Dark",
+    "workbench.iconTheme": "Monokai Pro (Filter Spectrum) Icons",
+
+    "vim.incsearch": true,
+    "vim.useSystemClipboard": true,
+    "vim.useCtrlKeys": false,
+    "vim.hlsearch": true,
+    "vim.leader": "<space>",
+    "vim.insertModeKeyBindings": [
+        // {
+        //     "before": [
+        //         "j",
+        //         "j"
+        //     ],
+        //     "after": [
+        //         "<Esc>"
+        //     ]
+        // }
+    ],
+    "vim.visualModeKeyBindingsNonRecursive": [{
+            "before": [
+                ">"
+            ],
+            "commands": [
+                "editor.action.indentLines"
+            ]
+        },
+        {
+            "before": [
+                "="
+            ],
+            "commands": [
+                "editor.action.formatSelection",
+            ]
+        },
+        {
+            "before": [
+                ">"
+            ],
+            "commands": [
+                "editor.action.indentLines"
+            ]
+        },
+        {
+            "before": [
+                "<"
+            ],
+            "commands": [
+                "editor.action.outdentLines"
+            ]
+        },
+    ],
+    "vim.normalModeKeyBindingsNonRecursive": [{
+            "before": ["<ESC>", "<ESC>"],
+            "commands": [
+                "workbench.action.showCommands",
+            ]
+        },
+        {
+            "before": ["<leader>", "m"],
+            "commands": [
+                "bookmarks.toggle"
+            ]
+        },
+        {
+            "before": ["<leader>", "b"],
+            "commands": [
+                "bookmarks.list"
+            ]
+        },
+        {
+            "before": [
+                "<C-n>"
+            ],
+            "commands": [
+                ":nohl"
+            ]
+        }
+    ],
+    "vim.handleKeys": {
+        // "<C-a>": false,
+        // "<C-f>": false,
+        // "<C-j>": false,
+        // "<C-b>": false
+    },
+    "vim.statusBarColorControl": true,
+    "vim.statusBarColors.normal": "#555588",
+    "vim.statusBarColors.insert": "#BF616A",
+    "vim.statusBarColors.visual": "#889944",
+    "vim.statusBarColors.visualline": "#446600",
+    "vim.statusBarColors.visualblock": "#A3BE8C",
+    "vim.statusBarColors.replace": "#D08770",
+    "terminal.integrated.rendererType": "dom",
+    "emmet.triggerExpansionOnTab": false,
+    "html-css-class-completion.enableEmmetSupport": false,
+    "python.jediEnabled": false,
+    "workbench.statusBar.feedback.visible": false,
+    "debug.inlineValues": true,
+    "zenMode.hideTabs": false,
+    "editor.fontSize": 14,
+    "emmet.includeLanguages": {
+        "django-html": "html"
+    },
+    "liveServer.settings.donotShowInfoMsg": true,
+    "vetur.format.defaultFormatter.html": "js-beautify-html",
+    "javascript.referencesCodeLens.enabled": true,
+
+    "editor.formatOnSave": true,
+    "[javascript]": {
+        "editor.formatOnSave": false,
+    },
+    "eslint.autoFixOnSave": true,
+    "eslint.alwaysShowStatus": true
+    ,
+    "editor.renderControlCharacters": true,
+    "editor.renderLineHighlight": "all",
+    "editor.formatOnPaste": true,
+    "editor.minimap.enabled": false,
+    "explorer.openEditors.visible": 0,
+    "emmet.showSuggestionsAsSnippets": true,
+    "extensions.showRecommendationsOnlyOnDemand": true,
+    "extensions.ignoreRecommendations": true,
+    "files.hotExit": "onExitAndWindowClose",
+    "vim.searchHighlightColor": "rgba(150,  150, 255, 0.3)",
+    "editor.occurrencesHighlight": false,
+}
