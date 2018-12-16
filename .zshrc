@@ -102,8 +102,6 @@ setLocale() {
     adb shell "su -c 'setprop persist.sy.language $1; setprop persist.sys.country $2; stop; sleep 5; start'"
 }
 alias setLocale=setLocale
-# helper do hexdump a file w/less
-xx() { hexdump -C $* | less }
 export REPORTTIME=3
 
 # The next line updates PATH for the Google Cloud SDK.
@@ -112,7 +110,10 @@ if [ -f '/home/francois/google-cloud-sdk/path.zsh.inc' ]; then source '/home/fra
 # The next line enables shell command completion for gcloud.
 if [ -f '/home/francois/google-cloud-sdk/completion.zsh.inc' ]; then source '/home/francois/google-cloud-sdk/completion.zsh.inc'; fi
 
+# helper do hexdump a file w/less
+xx() { hexdump -C $* | less }
 UU() { sudo apt update && sudo apt upgrade }
+
 export PATH=~/bin:/sbin:/usr/sbin:${PATH}
 export PATH=~/Android/Sdk/platform-tools:~/Android/Sdk/tools:${PATH}
 export PATH=~/.cabal/bin:$PATH

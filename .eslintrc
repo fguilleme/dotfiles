@@ -1,6 +1,6 @@
 {
   "extends": [
-    "prettier"
+    "eslint:recommended"
   ],
   "parser": "babel-eslint",
   "parserOptions": {
@@ -37,7 +37,7 @@
     "prefer-const": [
       "error",
       {
-        "destructuring": "all",
+        "destructuring": "all"
       }
     ],
     "arrow-body-style": [
@@ -89,6 +89,8 @@
         "allowTemplateLiterals": true
       }
     ],
+    "semi": ["error", "always"],
+    "indent": ["error", 2],
     "prettier/prettier": [
       "error",
       {
@@ -99,6 +101,8 @@
     ]
   },
   "plugins": [
-    "prettier"
+    "prettier",
+    "vue",
+    "html"
   ]
 }

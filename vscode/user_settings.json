@@ -23,7 +23,6 @@
         "statusBar.debuggingBackground": "#555588"
     },
     "workbench.colorTheme": "Visual Studio Dark",
-    "workbench.iconTheme": "Monokai Pro (Filter Spectrum) Icons",
 
     "vim.incsearch": true,
     "vim.useSystemClipboard": true,
@@ -126,7 +125,6 @@
         "django-html": "html"
     },
     "liveServer.settings.donotShowInfoMsg": true,
-    "vetur.format.defaultFormatter.html": "js-beautify-html",
     "javascript.referencesCodeLens.enabled": true,
 
     "editor.formatOnSave": true,
@@ -147,4 +145,5 @@
     "files.hotExit": "onExitAndWindowClose",
     "vim.searchHighlightColor": "rgba(150,  150, 255, 0.3)",
     "editor.occurrencesHighlight": false,
+    "vetur.format.defaultFormatter.js": "prettier-eslint",
 }
