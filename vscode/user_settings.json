@@ -18,9 +18,9 @@
 
     "workbench.activityBar.visible": true,
     "workbench.colorCustomizations": {
-        "statusBar.background": "#555588",
-        "statusBar.noFolderBackground": "#555588",
-        "statusBar.debuggingBackground": "#555588"
+        "statusBar.background": "#BF616A",
+        "statusBar.noFolderBackground": "#BF616A",
+        "statusBar.debuggingBackground": "#BF616A"
     },
     "workbench.colorTheme": "Visual Studio Dark",
 
