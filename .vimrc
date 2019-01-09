@@ -991,15 +991,15 @@ let g:pymode_rope_complete_on_dot = 1
 
 nmap <silent><Leader>N :SyntasticCheck<CR>:Errors<CR>
 
-let g:syntastic_python_pylint_exe = "pylint"
-let g:syntastic_python_python_exe = "python3"
+" let g:syntastic_python_pylint_exe = "pylint"
+" let g:syntastic_python_python_exe = "python3"
 " let g:syntastic_python_checkers = [ "pyflakes" ]
 let g:syntastic_mode_map = { 'mode': 'active',
             \ 'active_filetypes': [],
             \ 'passive_filetypes': [] }
 " let g:syntastic_debug=255
 " let g:syntastic_auto_jump=1
-" let g:syntastic_auto_loc_list=1
+let g:syntastic_auto_loc_list=1
 let g:syntastic_always_populate_loc_list=1
 let g:syntastic_check_on_wq=0
 " let g:syntastic_shell= '/bin/sh'

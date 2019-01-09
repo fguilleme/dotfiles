@@ -18,9 +18,9 @@
 
     "workbench.activityBar.visible": true,
     "workbench.colorCustomizations": {
-        "statusBar.background": "#BF616A",
-        "statusBar.noFolderBackground": "#BF616A",
-        "statusBar.debuggingBackground": "#BF616A"
+        "statusBar.background": "#555588",
+        "statusBar.noFolderBackground": "#555588",
+        "statusBar.debuggingBackground": "#555588"
     },
     "workbench.colorTheme": "Visual Studio Dark",
 
@@ -58,14 +58,6 @@
         },
         {
             "before": [
-                ">"
-            ],
-            "commands": [
-                "editor.action.indentLines"
-            ]
-        },
-        {
-            "before": [
                 "<"
             ],
             "commands": [
@@ -74,12 +66,6 @@
         },
     ],
     "vim.normalModeKeyBindingsNonRecursive": [{
-            "before": ["<ESC>", "<ESC>"],
-            "commands": [
-                "workbench.action.showCommands",
-            ]
-        },
-        {
             "before": ["<leader>", "m"],
             "commands": [
                 "bookmarks.toggle"
@@ -90,18 +76,11 @@
             "commands": [
                 "bookmarks.list"
             ]
-        },
-        {
-            "before": [
-                "<C-n>"
-            ],
-            "commands": [
-                ":nohl"
-            ]
         }
     ],
     "vim.handleKeys": {
-        // "<C-a>": false,
+        "<C-a>": true,
+        "<C-x>": true,
         // "<C-f>": false,
         // "<C-j>": false,
         // "<C-b>": false
@@ -137,7 +116,7 @@
     "editor.renderControlCharacters": true,
     "editor.renderLineHighlight": "all",
     "editor.formatOnPaste": true,
-    "editor.minimap.enabled": false,
+    "editor.minimap.enabled": true,
     "explorer.openEditors.visible": 0,
     "emmet.showSuggestionsAsSnippets": true,
     "extensions.showRecommendationsOnlyOnDemand": true,
@@ -146,4 +125,5 @@
     "vim.searchHighlightColor": "rgba(150,  150, 255, 0.3)",
     "editor.occurrencesHighlight": false,
     "vetur.format.defaultFormatter.js": "prettier-eslint",
+    "python.linting.pylintEnabled": true,
 }

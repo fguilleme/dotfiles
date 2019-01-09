@@ -112,7 +112,7 @@ if [ -f '/home/francois/google-cloud-sdk/completion.zsh.inc' ]; then source '/ho
 
 # helper do hexdump a file w/less
 xx() { hexdump -C $* | less }
-UU() { sudo apt update && sudo apt upgrade }
+UU() { sudo apt update && sudo apt upgrade -y }
 
 export PATH=~/bin:/sbin:/usr/sbin:${PATH}
 export PATH=~/Android/Sdk/platform-tools:~/Android/Sdk/tools:${PATH}
