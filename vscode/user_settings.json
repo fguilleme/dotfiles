@@ -27,7 +27,6 @@
     "vim.incsearch": true,
     "vim.useSystemClipboard": true,
     "vim.useCtrlKeys": false,
-    "vim.hlsearch": true,
     "vim.leader": "<space>",
     "vim.insertModeKeyBindings": [
         // {
@@ -71,6 +70,25 @@
                 "bookmarks.toggle"
             ]
         },
+        //    {
+        //         "before": [":"],
+        //         "commands": [
+        //             "workbench.action.showCommands",
+        //         ]
+        //     }, 
+        {
+            "before": ["Z", "Z"],
+            "commands": [
+                ":wq"
+            ]
+        },
+
+        {
+            "before": ["v"],
+            "after": [
+                "<C-v>"
+            ]
+        },
         {
             "before": ["<leader>", "b"],
             "commands": [
@@ -81,10 +99,12 @@
     "vim.handleKeys": {
         "<C-a>": true,
         "<C-x>": true,
+        "<C-r>": true,
         // "<C-f>": false,
         // "<C-j>": false,
         // "<C-b>": false
     },
+    "vim.hlsearch": true,
     "vim.statusBarColorControl": true,
     "vim.statusBarColors.normal": "#555588",
     "vim.statusBarColors.insert": "#BF616A",
@@ -111,12 +131,11 @@
         "editor.formatOnSave": false,
     },
     "eslint.autoFixOnSave": true,
-    "eslint.alwaysShowStatus": true
-    ,
+    "eslint.alwaysShowStatus": true,
     "editor.renderControlCharacters": true,
     "editor.renderLineHighlight": "all",
     "editor.formatOnPaste": true,
-    "editor.minimap.enabled": true,
+    "editor.minimap.enabled": false,
     "explorer.openEditors.visible": 0,
     "emmet.showSuggestionsAsSnippets": true,
     "extensions.showRecommendationsOnlyOnDemand": true,
@@ -126,4 +145,6 @@
     "editor.occurrencesHighlight": false,
     "vetur.format.defaultFormatter.js": "prettier-eslint",
     "python.linting.pylintEnabled": true,
+    "workbench.settings.editor": "ui",
+    "workbench.settings.useSplitJSON": true,
 }

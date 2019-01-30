@@ -1,0 +1,21 @@
+rename .eslintrc_vue
+rename .eslintrc
+search .vim
+mkdir vim
+mkdir large_files
+search cudnn
+open_with 
+mkdir data
+rename c.txt
+rename yolo_anchors.txt
+touch 
+mkdir optic
+rename test2.jpg
+rename test1.jpg
+open_with 1
+rename procdash_1801
+rename procdash_2601
+rename photo
+cd  .local
+delete
+rename nas
