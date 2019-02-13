@@ -104,12 +104,6 @@ setLocale() {
 alias setLocale=setLocale
 export REPORTTIME=3
 
-# The next line updates PATH for the Google Cloud SDK.
-if [ -f '/home/francois/google-cloud-sdk/path.zsh.inc' ]; then source '/home/francois/google-cloud-sdk/path.zsh.inc'; fi
-
-# The next line enables shell command completion for gcloud.
-if [ -f '/home/francois/google-cloud-sdk/completion.zsh.inc' ]; then source '/home/francois/google-cloud-sdk/completion.zsh.inc'; fi
-
 # helper do hexdump a file w/less
 xx() { hexdump -C $* | less }
 UU() { sudo apt update && sudo apt upgrade -y }
@@ -119,3 +113,11 @@ export PATH=~/Android/Sdk/platform-tools:~/Android/Sdk/tools:${PATH}
 export PATH=~/.cabal/bin:$PATH
 export PATH=~/node/bin:$PATH
 
+source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
+
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/home/francois/google-cloud-sdk/path.zsh.inc' ]; then . '/home/francois/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/home/francois/google-cloud-sdk/completion.zsh.inc' ]; then . '/home/francois/google-cloud-sdk/completion.zsh.inc'; fi

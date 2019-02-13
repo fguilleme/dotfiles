@@ -23,7 +23,8 @@
         "statusBar.debuggingBackground": "#555588"
     },
     "workbench.colorTheme": "Visual Studio Dark",
-
+    "vim.debug.silent": true,
+    "vim.ignorecase": true,
     "vim.incsearch": true,
     "vim.useSystemClipboard": true,
     "vim.useCtrlKeys": false,
@@ -70,12 +71,6 @@
                 "bookmarks.toggle"
             ]
         },
-        //    {
-        //         "before": [":"],
-        //         "commands": [
-        //             "workbench.action.showCommands",
-        //         ]
-        //     }, 
         {
             "before": ["Z", "Z"],
             "commands": [
@@ -119,18 +114,18 @@
     "workbench.statusBar.feedback.visible": false,
     "debug.inlineValues": true,
     "zenMode.hideTabs": false,
-    "editor.fontSize": 14,
+    "editor.fontSize": 13,
     "emmet.includeLanguages": {
         "django-html": "html"
     },
     "liveServer.settings.donotShowInfoMsg": true,
     "javascript.referencesCodeLens.enabled": true,
 
-    "editor.formatOnSave": true,
-    "[javascript]": {
-        "editor.formatOnSave": false,
-    },
-    "eslint.autoFixOnSave": true,
+    // "editor.formatOnSave": true,
+    // "[javascript]": {
+    //     "editor.formatOnSave": false,
+    // },
+    // "eslint.autoFixOnSave": true,
     "eslint.alwaysShowStatus": true,
     "editor.renderControlCharacters": true,
     "editor.renderLineHighlight": "all",
@@ -147,4 +142,14 @@
     "python.linting.pylintEnabled": true,
     "workbench.settings.editor": "ui",
     "workbench.settings.useSplitJSON": true,
+    "sync.gist": "9e598eb299e1ab45623a5900152cb41f",
+    "[c]": {
+        "editor.tabSize": 4,
+        "editor.useTabStops": true
+    },
+    "[cpp]": {
+        "editor.tabSize": 4,
+        "editor.useTabStops": true
+    },
+    "terminal.integrated.scrollback": 10000,
 }

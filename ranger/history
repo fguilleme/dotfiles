@@ -16,6 +16,22 @@ open_with 1
 rename procdash_1801
 rename procdash_2601
 rename photo
-cd  .local
-delete
 rename nas
+search nas
+cd  .local
+search 3BCC
+cd  /nas
+open_with q
+search gdb
+mkdir .gdb
+mkdir qt5printers
+search pro
+mkdir www
+delete
+search .oh
+search fi
+search fish
+cd  .zsh
+mkdir .zsh
+rename photographer.png
+rename photographer2.png
