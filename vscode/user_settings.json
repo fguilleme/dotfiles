@@ -1,4 +1,9 @@
 {
+    "files.watcherExclude": {
+        "**/.git/objects/**": true,
+        "**/.git/subtree-cache/**": true,
+        "**/node_modules/*/**": true
+    },
     "files.autoSave": "afterDelay",
     "files.associations": {
         "*.json": "jsonc",
@@ -7,15 +12,12 @@
     "files.exclude": {
         "*.orig": true
     },
-
     "window.zoomLevel": 1,
-
+    "editor.rulers": [80, 120],
     "editor.renderWhitespace": "boundary",
     "editor.wordWrap": "on",
-
     "breadcrumbs.enabled": true,
     "explorer.confirmDelete": false,
-
     "workbench.activityBar.visible": true,
     "workbench.colorCustomizations": {
         "statusBar.background": "#555588",
@@ -40,7 +42,8 @@
         //     ]
         // }
     ],
-    "vim.visualModeKeyBindingsNonRecursive": [{
+    "vim.visualModeKeyBindingsNonRecursive": [
+        {
             "before": [
                 ">"
             ],
@@ -65,27 +68,38 @@
             ]
         },
     ],
-    "vim.normalModeKeyBindingsNonRecursive": [{
-            "before": ["<leader>", "m"],
+    "vim.normalModeKeyBindingsNonRecursive": [
+        {
+            "before": [
+                "<leader>",
+                "m"
+            ],
             "commands": [
                 "bookmarks.toggle"
             ]
         },
         {
-            "before": ["Z", "Z"],
+            "before": [
+                "Z",
+                "Z"
+            ],
             "commands": [
                 ":wq"
             ]
         },
-
         {
-            "before": ["v"],
+            "before": [
+                "v"
+            ],
             "after": [
                 "<C-v>"
             ]
         },
         {
-            "before": ["<leader>", "b"],
+            "before": [
+                "<leader>",
+                "b"
+            ],
             "commands": [
                 "bookmarks.list"
             ]
