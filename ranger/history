@@ -1,37 +1,50 @@
-rename .eslintrc_vue
-rename .eslintrc
-search .vim
-mkdir vim
-mkdir large_files
-search cudnn
-open_with 
-mkdir data
-rename c.txt
-rename yolo_anchors.txt
-touch 
-mkdir optic
-rename test2.jpg
-rename test1.jpg
-open_with 1
-rename procdash_1801
 rename procdash_2601
 rename photo
 rename nas
 search nas
 cd  .local
-search 3BCC
 cd  /nas
-open_with q
 search gdb
 mkdir .gdb
 mkdir qt5printers
 search pro
 mkdir www
-delete
-search .oh
 search fi
 search fish
 cd  .zsh
 mkdir .zsh
 rename photographer.png
 rename photographer2.png
+search .oh
+search sugge
+search dot
+search .gdb
+search proj
+search 3B
+search 3BCC
+open_with hexdump -C
+open_with xed
+rename logan1
+cd  .gdb
+mkdir logan_sav
+rename pctools_old
+open_with zip
+rename final_js
+open_with 1
+open_with sh
+search .parrot
+mkdir trash
+rename out_script
+cd 
+rename pctools
+rename qt5.12.3
+open_with q
+open_with 
+touch .xx
+search .local
+mkdir logan
+mkdir scripts
+mkdir modules
+touch test.js
+mkdir toto.js
+delete

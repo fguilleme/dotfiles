@@ -145,7 +145,7 @@
     "editor.renderControlCharacters": true,
     "editor.renderLineHighlight": "all",
     "editor.formatOnPaste": true,
-    "editor.minimap.enabled": false,
+    "editor.minimap.enabled": true,
     "explorer.openEditors.visible": 0,
     "emmet.showSuggestionsAsSnippets": true,
     "extensions.showRecommendationsOnlyOnDemand": true,
@@ -157,7 +157,11 @@
     "python.linting.pylintEnabled": true,
     "workbench.settings.editor": "ui",
     "workbench.settings.useSplitJSON": true,
+<<<<<<< Updated upstream
     "sync.gist": "243c364b9816e85027118176cdff9bec",
+=======
+    "sync.gist": "24c6cf61169d71bf3d01e818eea945b9",
+>>>>>>> Stashed changes
     "[c]": {
         "editor.tabSize": 4,
         "editor.useTabStops": true
@@ -173,4 +177,5 @@
     "cSpell.userWords": [
         "qabstractitemmodeldatalist"
     ],
+    "terminal.integrated.fontFamily": "'Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'",
 }

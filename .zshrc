@@ -35,6 +35,7 @@ ZSH_THEME="fguilleme"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 plugins=(git colorize zsh-history-substring-search per-directory-history zsh-navigation-tools)
 
+export ZSH_DISABLE_COMPFIX=true
 source $ZSH/oh-my-zsh.sh
 
 
