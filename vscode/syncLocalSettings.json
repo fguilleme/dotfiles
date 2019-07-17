@@ -18,7 +18,7 @@
     ],
     "ignoreExtensions": [],
     "gistDescription": "Visual Studio Code Settings Sync Gist",
-    "version": 331,
+    "version": 340,
     "token": "28d8fa749e5c0788e7a70307c03abb2cdef3c5e5",
     "downloadPublicGist": false,
     "supportedFileExtensions": [
@@ -27,12 +27,13 @@
     ],
     "openTokenLink": true,
     "disableUpdateMessage": false,
-    "lastUpload": "2019-06-25T08:35:25.756Z",
+    "lastUpload": "2019-02-19T10:42:03.730Z",
     "lastDownload": null,
     "githubEnterpriseUrl": null,
     "askGistName": false,
     "customFiles": {},
     "hostName": null,
     "universalKeybindings": false,
+    "autoUploadDelay": 20,
     "replaceCodeSettings": {}
 }

@@ -113,7 +113,7 @@ export PATH=~/Android/Sdk/platform-tools:~/Android/Sdk/tools:${PATH}
 export PATH=~/.cabal/bin:$PATH
 export PATH=~/node/bin:$PATH
 
-source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
+source ~/dotfiles/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 
 # The next line updates PATH for the Google Cloud SDK.
