@@ -157,7 +157,7 @@
     "python.linting.pylintEnabled": true,
     "workbench.settings.editor": "ui",
     "workbench.settings.useSplitJSON": true,
-    "sync.gist": "9e598eb299e1ab45623a5900152cb41f",
+    "sync.gist": "243c364b9816e85027118176cdff9bec",
     "[c]": {
         "editor.tabSize": 4,
         "editor.useTabStops": true
