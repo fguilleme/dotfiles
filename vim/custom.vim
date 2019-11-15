@@ -105,6 +105,7 @@ NeoBundle 'eagletmt/ghcmod-vim'
 NeoBundle 'bitc/vim-hdevtools'
 
 NeoBundle 'mileszs/ack.vim'
+NeoBundle 'kien/ctrlp.vim' " Fuzzy file, buffer, mru, tag, etc finder.
 " NeoBundle 'vim-scripts/rainbow_parentheses.vim' " Better Rainbow Parentheses
 " NeoBundle 'vim-scripts/linediff.vim' " Perform an interactive diff on two blocks of text
 NeoBundle 'vim-scripts/DoxygenToolkit.vim' " Simplify Doxygen documentation in C, C++, Python.
@@ -118,7 +119,8 @@ map <silent> ,. <Plug>ToggleProject
 "space is not working for abbr
 "use C-]
 " source ~/.vim/bundle/Unicode-Macro-Table/plugin/unicodemacros.vi( 2/17): |vim-haskellConceal| Errorm
-" source ~/.vim/bundle/Alternate/plugin/a.vim
+source ~/.vim/bundle/Alternate/plugin/a.vim
+nmap <A-O> :A<CR>
 
 "}}}
 
@@ -144,20 +146,23 @@ let g:ycm_filetype_whitelist = { 'c': 1, 'cpp': 1, 'objc': 1, 'python':1 }
 " let g:ycm_filetype_specific_completion_to_disable = { 'vim': 1, 'haskell': 1 }
  let g:ycm_filetype_specific_completion_to_disable = { 'vim': 1, 'haskell':1, 'java':1 }
 let g:ycm_confirm_extra_conf = 0
+
+nmap <F12> :YcmCompleter GoTo <C-R><C-W><CR>
 "}}}
 
+
 "{{{ JAVAComplete
-let targetAndroidJar = '/home/francois/android/android-sdk/platforms/android-21/android.jar'
-if $CLASSPATH =~ ''
-    let $CLASSPATH = targetAndroidJar . ':' . $CLASSPATH
-else
-    let $CLASSPATH = targetAndroidJar
-endif
+" let targetAndroidJar = '/home/francois/android/android-sdk/platforms/android-21/android.jar'
+" if $CLASSPATH =~ ''
+"     let $CLASSPATH = targetAndroidJar . ':' . $CLASSPATH
+" else
+"     let $CLASSPATH = targetAndroidJar
+" endif
 
-NeoBundle 'vim-scripts/javacomplete' " Omni Completion for JAVA
+" NeoBundle 'vim-scripts/javacomplete' " Omni Completion for JAVA
 
-" configure syntastic to work with java projects
-let g:syntastic_java_javac_classpath = "./bin/classes:~/android/android-sdk/platforms/android-21/*.jar"
+" " configure syntastic to work with java projects
+" let g:syntastic_java_javac_classpath = "./bin/classes:~/android/android-sdk/platforms/android-21/*.jar"
 "}}}
 
 colorscheme koehler
@@ -290,6 +295,7 @@ endif
 
 let g:ackprg = 'ag --nogroup --nocolor --column'
 let g:ackhighlight = 1
+NeoBundle 'beyondgrep/ack3' " ack is a grep-like search tool optimized for source code.
 
 noremap <silent> <leader>/ :execute 'vimgrep /'.@/.'/g %'<CR>:copen<CR>
 noremap <silent> <TAB> %
@@ -297,18 +303,18 @@ noremap <silent> <TAB> %
 " execute the current line
 vnoremap  <silent> <leader>: "yy:execute @@<CR>
 
-au VimLeave * execute 'mksession!  $PWD/.vimsession'<CR>sleep 2<CR>
+" au VimLeave * execute 'mksession!  $PWD/.vimsession'<CR>sleep 2<CR>
 
-au VimEnter * 
-    \ if argc() == 0 | 
-    \   if filereadable($PWD . '/Session.vim') | 
-    \       source Session.vim |
-    \       source ~/.vimrc | 
-    \   endif |
-    " \   if filereadable('projrc') | 
-    " \       exec Project('projrc') | 
-    " \   endif |
-    \ endif
+" au VimEnter * 
+"     \ if argc() == 0 | 
+"     \   if filereadable($PWD . '/Session.vim') | 
+"     \       source Session.vim |
+"     \       source ~/.vimrc | 
+"     \   endif |
+"     " \   if filereadable('projrc') | 
+"     " \       exec Project('projrc') | 
+"     " \   endif |
+"     \ endif
 
 " if a vimrc file is present in the current dir load it
 if filereadable("vimrc")
@@ -365,6 +371,8 @@ let g:airline_section_error=0
 let g:airline_section_b=0
 
 let g:vinarise_detect_large_file_size = 0
+
+set guifont=DejaVu\ Sans\ Mono\ 11
 
 " let g:syntastic_java_javac_classpath = '/home/francois/android/du9/out/target/common/obj/JAVA_LIBRARIES/bouncycastle_intermediates/classes.jar:/home/francois/android/du9/out/target/common/obj/JAVA_LIBRARIES/conscrypt_intermediates/classes.jar:/home/francois/android/du9/out/target/common/obj/JAVA_LIBRARIES/core-libart_intermediates/classes.jar:/home/francois/android/du9/out/target/common/obj/JAVA_LIBRARIES/ext_intermediates/classes.jar:/home/francois/android/du9/out/target/common/obj/JAVA_LIBRARIES/framework_intermediates/classes.jar:/home/francois/android/du9/out/target/common/obj/JAVA_LIBRARIES/okhttp_intermediates/classes.jar:/home/francois/android/du9/out/target/common/obj/JAVA_LIBRARIES/telephony-common_intermediates/classes.jar:/home/francois/android/du9/out/target/common/obj/JAVA_LIBRARIES/voip-common_intermediates/classes.jar:'
 " vim: foldmethod=marker
