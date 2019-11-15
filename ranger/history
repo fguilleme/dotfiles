@@ -1,3 +1,10 @@
+rename c.txt
+rename yolo_anchors.txt
+touch 
+mkdir optic
+rename test2.jpg
+rename test1.jpg
+rename procdash_1801
 rename procdash_2601
 rename photo
 rename nas
@@ -15,36 +22,27 @@ cd  .zsh
 mkdir .zsh
 rename photographer.png
 rename photographer2.png
-search .oh
-search sugge
-search dot
-search .gdb
-search proj
-search 3B
-search 3BCC
-open_with hexdump -C
-open_with xed
-rename logan1
-cd  .gdb
-mkdir logan_sav
-rename pctools_old
-open_with zip
-rename final_js
-open_with 1
-open_with sh
-search .parrot
-mkdir trash
-rename out_script
+cd  .vscode
+search code
+search net
+rename libqsqlmysql.so_disabled
+rename libqsqlodbc.so_disabled
+rename libqsqlpsql.so_disabled
+mkdir layouts
+cd  ,local
 cd 
+cd  dotfiles
+rename syncLocalSettings.json
 rename pctools
-rename qt5.12.3
-open_with q
-open_with 
-touch .xx
+cd  .local
+rename test.wasm
+open_with 1
+cd  .logan
+cd  /tmp
 search .local
-mkdir logan
-mkdir scripts
-mkdir modules
-touch test.js
-mkdir toto.js
+rename test.bin
+rename js1
+mkdir js
+open_with 
+search local
 delete

@@ -72,6 +72,14 @@
     "vim.normalModeKeyBindingsNonRecursive": [
         {
             "before": [
+                "u"
+            ],
+            "commands": [
+                "undo"
+            ]
+        },
+        {
+            "before": [
                 "<leader>",
                 "m"
             ],
@@ -157,11 +165,7 @@
     "python.linting.pylintEnabled": true,
     "workbench.settings.editor": "ui",
     "workbench.settings.useSplitJSON": true,
-<<<<<<< Updated upstream
-    "sync.gist": "243c364b9816e85027118176cdff9bec",
-=======
     "sync.gist": "24c6cf61169d71bf3d01e818eea945b9",
->>>>>>> Stashed changes
     "[c]": {
         "editor.tabSize": 4,
         "editor.useTabStops": true
@@ -172,10 +176,25 @@
         "editor.defaultFormatter": "xaver.clang-format"
     },
     "terminal.integrated.scrollback": 10000,
-    "editor.suggestSelection": "first",
+    "editor.suggestSelection": "recentlyUsedByPrefix",
     "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
     "cSpell.userWords": [
-        "qabstractitemmodeldatalist"
+        "Guillemé",
+        "ULOGI",
+        "bootid",
+        "qabstractitemmodeldatalist",
+        "ugrade"
     ],
-    "terminal.integrated.fontFamily": "'Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'",
+    "[javascript]": {
+        "editor.formatOnSave": true,
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "gitlens.codeLens.enabled": false,
+    "gitlens.hovers.enabled": false,
+    "gitlens.views.lineHistory.enabled": false,
+    "gitlens.views.search.enabled": false,
+    "prettier.semi": false,
+    "prettier.singleQuote": true,
+    "git.autoStash": true,
+    "git.branchSortOrder": "alphabetically",
 }
