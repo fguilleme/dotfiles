@@ -6,7 +6,7 @@ export ZSH=$HOME/.oh-my-zsh
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
 ZSH_THEME="fguilleme"
-#ZSH_THEME="sunaku"
+#ZSH_THEME="kphoen"
 
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
@@ -81,10 +81,11 @@ bindkey '^W' backward-kill-default-word   # = is next to backspace
 
 # helper command to create a temp dir and cd into
 function mkcd {
-    mkdir "$(date +%D_%T | tr /: __)" && cd $_
+#    mkdir "$(date +%D_%T | tr /: __)" && cd $_
+    mkdir "$(date +%Y%m%d_%H%M%S | tr /: __)" && cd $_
 }
 
-export EDITOR=gvim
+export EDITOR=nvim
 export SHELL=/usr/bin/zsh
 
 # autoload -U select-word-style
@@ -92,7 +93,7 @@ export SHELL=/usr/bin/zsh
 
 # lazy man aliases
 alias r=ranger
-alias R='sudo ranger'
+alias R='sudo -E ranger'
 
 alias atop="adb shell dumpsys activity top"
 capture() {
@@ -103,11 +104,11 @@ setLocale() {
     adb shell "su -c 'setprop persist.sy.language $1; setprop persist.sys.country $2; stop; sleep 5; start'"
 }
 alias setLocale=setLocale
-export REPORTTIME=3
+#export REPORTTIME=3
 
 # helper do hexdump a file w/less
 xx() { hexdump -C $* | less }
-UU() { sudo apt update && sudo apt upgrade -y }
+UU() { sudo apt update && sudo apt dist-upgrade -y }
 
 export PATH=~/bin:/sbin:/usr/sbin:${PATH}
 export PATH=~/Android/Sdk/platform-tools:~/Android/Sdk/tools:${PATH}
@@ -116,9 +117,11 @@ export PATH=~/node/bin:$PATH
 
 source ~/dotfiles/zsh-autosuggestions/zsh-autosuggestions.zsh
 
-
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '/home/francois/google-cloud-sdk/path.zsh.inc' ]; then . '/home/francois/google-cloud-sdk/path.zsh.inc'; fi
 
-# The next line enables shell command completion for gcloud.
-if [ -f '/home/francois/google-cloud-sdk/completion.zsh.inc' ]; then . '/home/francois/google-cloud-sdk/completion.zsh.inc'; fi
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+export FZF_DEFAULT_OPTS="--preview='~/.config/ranger/scope.sh {}'"
+export FZF_DEFAULT_COMMAND='rg --files --ignore-case --hidden -g "!{.git,node_modules,vendor}/*"'
+
+fpath+=${ZDOTDIR:-~}/.zsh_functions

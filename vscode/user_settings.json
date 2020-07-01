@@ -8,24 +8,50 @@
     "files.associations": {
         "*.json": "jsonc",
         "*.vue": "vue",
-        "*.qs": "javascript"
+        "*.qs": "javascript",
+        "*.fragmentshader": "glsl",
+        "*.shader": "glsl"
     },
     "files.exclude": {
-        "*.orig": true
+        "**/.o": true,
+        "**/.git": true,
+        "**/.svn": true,
+        "**/.hg": true,
+        "**/CVS": true,
+        "**/.DS_Store": true
     },
+    "files.hotExit": "onExitAndWindowClose",
+
     "window.zoomLevel": 1,
+
+    "editor.fontSize": 13,
     "editor.rulers": [80, 120],
     "editor.renderWhitespace": "boundary",
     "editor.wordWrap": "on",
-    "breadcrumbs.enabled": true,
+    "editor.renderControlCharacters": true,
+    "editor.renderLineHighlight": "all",
+    "editor.formatOnPaste": true,
+    "editor.minimap.enabled": true,
+    "editor.suggestSelection": "recentlyUsedByPrefix",
+    "editor.occurrencesHighlight": true,
+
+    "explorer.openEditors.visible": 0,
     "explorer.confirmDelete": false,
+
+    "breadcrumbs.enabled": true,
+
+    "workbench.colorTheme": "Visual Studio Dark",
     "workbench.activityBar.visible": true,
     "workbench.colorCustomizations": {
         "statusBar.background": "#555588",
         "statusBar.noFolderBackground": "#555588",
         "statusBar.debuggingBackground": "#555588"
     },
-    "workbench.colorTheme": "Visual Studio Dark",
+    "workbench.settings.editor": "json",
+    "workbench.settings.useSplitJSON": true,
+    "workbench.statusBar.feedback.visible": false,
+
+    // vIM
     "vim.debug.silent": true,
     "vim.ignorecase": true,
     "vim.incsearch": true,
@@ -89,15 +115,6 @@
         },
         {
             "before": [
-                "Z",
-                "Z"
-            ],
-            "commands": [
-                ":wq"
-            ]
-        },
-        {
-            "before": [
                 "v"
             ],
             "after": [
@@ -130,71 +147,87 @@
     "vim.statusBarColors.visualline": "#446600",
     "vim.statusBarColors.visualblock": "#A3BE8C",
     "vim.statusBarColors.replace": "#D08770",
+    "vim.searchHighlightColor": "rgba(150,  150, 255, 0.3)",
+
+    "terminal.integrated.scrollback": 10000,
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+    "cSpell.userWords": [
+        "Guillemé",
+    ],
     "terminal.integrated.rendererType": "dom",
-    "emmet.triggerExpansionOnTab": false,
     "html-css-class-completion.enableEmmetSupport": false,
-    "python.jediEnabled": false,
-    "workbench.statusBar.feedback.visible": false,
     "debug.inlineValues": true,
     "zenMode.hideTabs": false,
-    "editor.fontSize": 13,
+    "liveServer.settings.donotShowInfoMsg": true,
+
+    "emmet.triggerExpansionOnTab": false,
     "emmet.includeLanguages": {
         "django-html": "html"
     },
-    "liveServer.settings.donotShowInfoMsg": true,
-    "javascript.referencesCodeLens.enabled": true,
-
-    // "editor.formatOnSave": true,
-    // "[javascript]": {
-    //     "editor.formatOnSave": false,
-    // },
-    // "eslint.autoFixOnSave": true,
-    "eslint.alwaysShowStatus": true,
-    "editor.renderControlCharacters": true,
-    "editor.renderLineHighlight": "all",
-    "editor.formatOnPaste": true,
-    "editor.minimap.enabled": true,
-    "explorer.openEditors.visible": 0,
     "emmet.showSuggestionsAsSnippets": true,
+
     "extensions.showRecommendationsOnlyOnDemand": true,
     "extensions.ignoreRecommendations": true,
-    "files.hotExit": "onExitAndWindowClose",
-    "vim.searchHighlightColor": "rgba(150,  150, 255, 0.3)",
-    "editor.occurrencesHighlight": false,
-    "vetur.format.defaultFormatter.js": "prettier-eslint",
-    "python.linting.pylintEnabled": true,
-    "workbench.settings.editor": "ui",
-    "workbench.settings.useSplitJSON": true,
+
     "sync.gist": "24c6cf61169d71bf3d01e818eea945b9",
+
+    // GITLENS
+    "gitlens.codeLens.enabled": false,
+    "gitlens.hovers.enabled": false,
+    "gitlens.views.lineHistory.enabled": false,
+    "gitlens.views.search.enabled": false,
+    "git.autoStash": true,
+    "git.branchSortOrder": "alphabetically",
+    "git.suggestSmartCommit": false,
+    "gitlens.hovers.currentLine.over": "line",
+    "gitlens.views.repositories.files.layout": "tree",
+
+    // LANGUAGE SPECIFICS
     "[c]": {
         "editor.tabSize": 4,
-        "editor.useTabStops": true
+        "editor.useTabStops": true,
+        "editor.defaultFormatter": "xaver.clang-format"
     },
     "[cpp]": {
         "editor.tabSize": 4,
         "editor.useTabStops": true,
         "editor.defaultFormatter": "xaver.clang-format"
     },
-    "terminal.integrated.scrollback": 10000,
-    "editor.suggestSelection": "recentlyUsedByPrefix",
-    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
-    "cSpell.userWords": [
-        "Guillemé",
-        "ULOGI",
-        "bootid",
-        "qabstractitemmodeldatalist",
-        "ugrade"
-    ],
     "[javascript]": {
         "editor.formatOnSave": true,
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "eslint.autoFixOnSave": true,
+        "eslint.alwaysShowStatus": true,
+        "prettier.semi": false,
+        "prettier.singleQuote": true,
+        "javascript.referencesCodeLens.enabled": true,
+        "prettier.tabWidth": 4,
+        "prettier.singleQuote": true,
+        "prettier.semi": false,
     },
-    "gitlens.codeLens.enabled": false,
-    "gitlens.hovers.enabled": false,
-    "gitlens.views.lineHistory.enabled": false,
-    "gitlens.views.search.enabled": false,
-    "prettier.semi": false,
-    "prettier.singleQuote": true,
-    "git.autoStash": true,
-    "git.branchSortOrder": "alphabetically",
+    "[vue]": {
+        "vetur.format.defaultFormatter.js": "prettier-eslint",
+    },
+    "[python]": {
+        "python.linting.pylintEnabled": true,
+        "python.jediEnabled": false,
+    },
+    "[jsonc]": {
+        "editor.defaultFormatter": "HookyQR.beautify"
+    },
+    "c-cpp-flylint.flexelint.enable": false,
+    "c-cpp-flylint.clang.enable": false,
+    "c-cpp-flylint.clang.executable": "/usr/bin/clang-9",
+    "c-cpp-flylint.clang.standard": ["c++11", "c++14", "c++17"],
+    "c-cpp-flylint.debug": true,
+    "c-cpp-flylint.cppcheck.enable": false,
+    "cSpell.enableFiletypes": [
+        "!cpp"
+    ],
+    "[html]": {
+        "editor.defaultFormatter": "HookyQR.beautify"
+    },
+    "vscode-neovim.neovimPath": "/usr/bin/nvim",
+    "vscode-neovim.neovimInitPath": "/home/francois/.config/nvim/init.vim",
+    "vscode-neovim.mouseSelectionStartVisualMode": true
 }

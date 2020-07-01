@@ -106,7 +106,13 @@ NeoBundle 'bitc/vim-hdevtools'
 
 NeoBundle 'mileszs/ack.vim'
 NeoBundle 'kien/ctrlp.vim' " Fuzzy file, buffer, mru, tag, etc finder.
-" NeoBundle 'vim-scripts/rainbow_parentheses.vim' " Better Rainbow Parentheses
+let g:ctrlp_working_path_mode = 'ra'
+let g:ctrlp_custom_ignore = {
+  \ 'dir':  '\v[\/]\.(git|hg|svn)$',
+  \ 'file': '\v\.(o|bin|so)$',
+  \ }
+
+NeoBundle 'vim-scripts/rainbow_parentheses.vim' " Better Rainbow Parentheses
 " NeoBundle 'vim-scripts/linediff.vim' " Perform an interactive diff on two blocks of text
 NeoBundle 'vim-scripts/DoxygenToolkit.vim' " Simplify Doxygen documentation in C, C++, Python.
 " NeoBundle 'davidhalter/jedi-vim'
@@ -122,6 +128,7 @@ map <silent> ,. <Plug>ToggleProject
 source ~/.vim/bundle/Alternate/plugin/a.vim
 nmap <A-O> :A<CR>
 
+NeoBundle 'junegunn/fzf' " :cherry_blossom: A command-line fuzzy finder
 "}}}
 
 "highlight the word under the cursor and all its occurences
@@ -134,18 +141,21 @@ autocmd CursorMoved * exe printf('match WordUnder /\V\<%s\>/', escape(expand('<c
 
 NeoBundle "Valloric/YouCompleteMe"
 
-let g:ycm_semantic_triggers = {'haskell' : ['.'] }
+" let g:ycm_semantic_triggers = {'haskell' : ['.'] }
 
-let g:UltiSnipsExpandTrigger="<c-j>"
-let g:UltiSnipsJumpForwardTrigger="<c-j>"
-let g:UltiSnipsJumpBackwardTrigger="<c-k>"
+" let g:UltiSnipsExpandTrigger="<c-j>"
+" let g:UltiSnipsJumpForwardTrigger="<c-j>"
+" let g:UltiSnipsJumpBackwardTrigger="<c-k>"
 
-" let g:ycm_filetype_whitelist = { 'c': 1, 'cpp': 1, 'objc': 1, 'python': 1, 'haskell': 1, 'java': 1 }
-" let g:ycm_filetype_whitelist = { 'c': 1, 'cpp': 1, 'objc': 1, 'python': 1, 'haskell':1 }
-let g:ycm_filetype_whitelist = { 'c': 1, 'cpp': 1, 'objc': 1, 'python':1 }
-" let g:ycm_filetype_specific_completion_to_disable = { 'vim': 1, 'haskell': 1 }
- let g:ycm_filetype_specific_completion_to_disable = { 'vim': 1, 'haskell':1, 'java':1 }
+" " let g:ycm_filetype_whitelist = { 'c': 1, 'cpp': 1, 'objc': 1, 'python': 1, 'haskell': 1, 'java': 1 }
+" " let g:ycm_filetype_whitelist = { 'c': 1, 'cpp': 1, 'objc': 1, 'python': 1, 'haskell':1 }
+" let g:ycm_filetype_whitelist = { 'c': 1, 'cpp': 1, 'objc': 1, 'python':1 }
+" " let g:ycm_filetype_specific_completion_to_disable = { 'vim': 1, 'haskell': 1 }
+"  let g:ycm_filetype_specific_completion_to_disable = { 'vim': 1, 'haskell':1, 'java':1 }
 let g:ycm_confirm_extra_conf = 0
+
+" let g:ycm_server_python_interpreter = '/usr/bin/python3'
+" let g:ycm_python_binary_path = '/usr/bin/python3'
 
 nmap <F12> :YcmCompleter GoTo <C-R><C-W><CR>
 "}}}
@@ -293,9 +303,11 @@ else
 endif
 " }}}
 
+" Ack {{{
 let g:ackprg = 'ag --nogroup --nocolor --column'
 let g:ackhighlight = 1
 NeoBundle 'beyondgrep/ack3' " ack is a grep-like search tool optimized for source code.
+" }}}
 
 noremap <silent> <leader>/ :execute 'vimgrep /'.@/.'/g %'<CR>:copen<CR>
 noremap <silent> <TAB> %
@@ -315,15 +327,6 @@ vnoremap  <silent> <leader>: "yy:execute @@<CR>
 "     " \       exec Project('projrc') | 
 "     " \   endif |
 "     \ endif
-
-" if a vimrc file is present in the current dir load it
-if filereadable("vimrc")
-source vimrc
-endif
-
-if filereadable('tags')
-set tags=$PWD/tags
-endif
 
 " autocmd BufEnter *.py :setl wrap
 " autocmd BufEnter *.hs :IndentLinesReset
@@ -373,6 +376,15 @@ let g:airline_section_b=0
 let g:vinarise_detect_large_file_size = 0
 
 set guifont=DejaVu\ Sans\ Mono\ 11
+
+" if a vimrc file is present in the current dir load it
+if filereadable("vimrc")
+source vimrc
+endif
+
+if filereadable('tags')
+set tags=$PWD/tags
+endif
 
 " let g:syntastic_java_javac_classpath = '/home/francois/android/du9/out/target/common/obj/JAVA_LIBRARIES/bouncycastle_intermediates/classes.jar:/home/francois/android/du9/out/target/common/obj/JAVA_LIBRARIES/conscrypt_intermediates/classes.jar:/home/francois/android/du9/out/target/common/obj/JAVA_LIBRARIES/core-libart_intermediates/classes.jar:/home/francois/android/du9/out/target/common/obj/JAVA_LIBRARIES/ext_intermediates/classes.jar:/home/francois/android/du9/out/target/common/obj/JAVA_LIBRARIES/framework_intermediates/classes.jar:/home/francois/android/du9/out/target/common/obj/JAVA_LIBRARIES/okhttp_intermediates/classes.jar:/home/francois/android/du9/out/target/common/obj/JAVA_LIBRARIES/telephony-common_intermediates/classes.jar:/home/francois/android/du9/out/target/common/obj/JAVA_LIBRARIES/voip-common_intermediates/classes.jar:'
 " vim: foldmethod=marker
