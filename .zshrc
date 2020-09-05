@@ -117,11 +117,26 @@ export PATH=~/node/bin:$PATH
 
 source ~/dotfiles/zsh-autosuggestions/zsh-autosuggestions.zsh
 
-# The next line updates PATH for the Google Cloud SDK.
-if [ -f '/home/francois/google-cloud-sdk/path.zsh.inc' ]; then . '/home/francois/google-cloud-sdk/path.zsh.inc'; fi
-
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 export FZF_DEFAULT_OPTS="--preview='~/.config/ranger/scope.sh {}'"
 export FZF_DEFAULT_COMMAND='rg --files --ignore-case --hidden -g "!{.git,node_modules,vendor}/*"'
 
 fpath+=${ZDOTDIR:-~}/.zsh_functions
+
+export LD_PRELOAD=/lib/x86_64-linux-gnu/libSegFault.so 
+export SEGFAULT_SIGNALS="abrt segv fpe" 
+
+export TERM=st-256color         # allacrity set a custom TERM so if we connect to another host wihou it it goes nuts
+alias vi=nvim
+alias vim=nvim
+
+# set a random background for a specific screen or both
+set_ss() {
+  echo ${1:-$(shuf -i0-1)} | xargs  -n1  -I{} -- nitrogen --set-zoom-fill --random --head={}
+}
+alias sss=set_ss $*
+
+# needed to start ssh key daemon under awesome-wm
+eval $(gnome-keyring-daemon -c ssh -r 2> /dev/null)
+
+source ~/bin/macho.sh
