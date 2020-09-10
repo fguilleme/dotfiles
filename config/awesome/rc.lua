@@ -180,14 +180,14 @@ local function set_wallpaper(s)
    awful.spawn.with_shell("nitrogen --head=1 --random --set-zoom-fill")
 end
 
-local cpu_widget = require("awesome-wm-widgets.cpu-widget.cpu-widget")
-local calendar_widget = require("awesome-wm-widgets.calendar-widget.calendar")
+local cpu_widget = require("awesome-widgets.cpu-widget.cpu-widget")
+local calendar_widget = require("awesome-widgets.calendar-widget.calendar")
 local cw = calendar_widget({
     theme = 'outrun',
     placement = 'top_right'
 })
-local storage_widget = require("awesome-wm-widgets.fs-widget.fs-widget")
-local ram_widget = require("awesome-wm-widgets.ram-widget.ram-widget")
+local storage_widget = require("awesome-widgets.fs-widget.fs-widget")
+local ram_widget = require("awesome-widgets.ram-widget.ram-widget")
 
 mytextclock:connect_signal("button::press", 
     function(_, _, _, button)
